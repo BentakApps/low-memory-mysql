@@ -43,8 +43,8 @@ CREATE TABLE rating (
 
 CREATE TABLE station (
 	id int NOT NULL AUTO_INCREMENT,
-	place_id varchar(1024) NOT NULL,
-	pano_id varchar(1024) NOT NULL,
+	place_id varchar(512) NOT NULL,
+	pano_id varchar(512) NOT NULL,
 	name varchar(256) NOT NULL,
 	address varchar(256) NOT NULL,
 	lat decimal(10,7) NOT NULL,
@@ -68,8 +68,8 @@ CREATE TABLE station (
 
 CREATE TABLE stationexception (
 	id int NOT NULL AUTO_INCREMENT,
-	place_id varchar(1024) NOT NULL,
-	pano_id varchar(1024),
+	place_id varchar(512) NOT NULL,
+	pano_id varchar(512),
 	name varchar(256),
 	address varchar(256),
 	lat decimal(10,7),
@@ -111,7 +111,7 @@ CREATE TABLE user (
 	first_name varchar(128),
 	last_name varchar(128),
 	email varchar(128),
-	photo varchar(255),
+	photo varchar(256),
 	status varchar(64),
 	reputation tinyint unsigned NOT NULL,
 	created_at timestamp NULL DEFAULT CURRENT_TIMESTAMP(),
